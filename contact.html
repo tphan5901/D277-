@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow-y: hidden;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: flex;
+            padding: 2vh;
+            background-color: rgb(34, 176, 98);
+        }
+        .header h1{
+            color: white;
+        }
+        .nav {
+            margin-left: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            outline: none; 
+        }
+
+        .nav a:hover {
+            text-decoration: none;
+            color: white;
+            background: black;
+            border-radius: 5px;
+            outline: 2px solid black;
+        }
+
+        form {
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+       
+        }
+        
+        form input {
+            align-items: center;
+            width: 50%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        form label {
+            margin-bottom: 10px;
+        }
+
+
+        .footer {
+            padding: 10px;
+            color: white;
+            margin-top: 44vh; 
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <script src="index.js"></script>
+    <header class="header">
+        <h1>Contact form</h1>
+        <nav class="nav">
+            <a href="index.html" style="text-decoration:none">Home</a>
+        </nav>
+    </header>
+
+          
+
+        <form method="post" action="enctype" class="form-control">
+            <label for="username">Name</label>
+            <input type="text" placeholder="enter name">
+            
+            <label for="password">Last name</label>
+            <input type="password" placeholder="enter lastname">
+            
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="enter email">
+            
+            <label for="confirmEmail">Confirm Email</label>
+            <input type="text" id="confirmEmail" placeholder="confirm email">
+
+            <label for="">Ask a question</label>
+            <input type="text" placeholder="ask questions">
+            
+        </form>
+
+
+    <footer class="footer">
+        <p>Copyright @WA state 2024</p>
+    </footer>
+</body>
+</html>
