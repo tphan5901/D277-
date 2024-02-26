@@ -135,7 +135,9 @@
                 if(email == '' && confirmEmail == ''){
                     alert('please enter an email')
                 }
-                alert('Email does not match')
+                if(email != confirmEmail){
+                alert('Email does not match');
+                }
             }
         }
     
