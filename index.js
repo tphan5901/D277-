@@ -1,19 +1,23 @@
-let email = document.getElementById('email').value
-let confirmEmail = document.getElementById('confirmEmail').value
 
+        let button = document.getElementById("submit");
 
-function validate(){
-    if(email == confirmEmail){
-        email.style.borderColor = 'green'
-        alert('Email matches'); 
-    }else{
-        confirmEmail.style.borderColor = 'red';
-        alert('Email does not match'); 
-    }
-}
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
 
-document.addEventListener('keyup', function (){
-    email.addEventListener('change', validate);
-    confirmEmail.addEventListener('change', validate);
+            let email = document.getElementById('email').value;
+            let confirmEmail = document.getElementById('confirmEmail').value;
 
-})
+            validate(email, confirmEmail);
+        });
+
+        function validate(email, confirmEmail) {
+            if (email === confirmEmail) {
+                alert('Email matches')
+            } else {
+                if(email == '' && confirmEmail == ''){
+                    alert('please enter an email')
+                }
+                alert('Email does not match')
+            }
+        }
+
