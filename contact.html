@@ -127,9 +127,9 @@
 
             validate(email, confirmEmail);
         });
-
+    
         function validate(email, confirmEmail) {
-            if (email === confirmEmail) {
+            if (email != '' && confirmEmail != '' && email == confirmEmail) {
                 alert('Email matches')
             } else {
                 if(email == '' && confirmEmail == ''){
