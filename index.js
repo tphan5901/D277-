@@ -1,5 +1,4 @@
-
-        let button = document.getElementById("submit");
+    let button = document.getElementById("submit");
 
         button.addEventListener("click", function(event) {
             event.preventDefault();
@@ -9,15 +8,18 @@
 
             validate(email, confirmEmail);
         });
-
+    
         function validate(email, confirmEmail) {
-            if (email === confirmEmail) {
+            if (email != '' && confirmEmail != '' && email == confirmEmail) {
                 alert('Email matches')
             } else {
                 if(email == '' && confirmEmail == ''){
                     alert('please enter an email')
                 }
-                alert('Email does not match')
+                if(email != confirmEmail){
+                alert('Email does not match');
+                }
             }
         }
+    
 
